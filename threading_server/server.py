@@ -20,8 +20,7 @@ def proc(n):
 		msg += data.decode()
 		print("Отправка данных клиенту")
 		conn.send(data)
-		if not data:
-			break
+
 	print("Отключение клиента")
 	print(msg)
 	conn.close()
