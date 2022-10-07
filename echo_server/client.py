@@ -1,5 +1,4 @@
 import socket
-from time import sleep
 
 sock = socket.socket()
 sock.connect(('localhost', 9090))
