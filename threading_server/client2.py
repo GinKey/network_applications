@@ -1,0 +1,13 @@
+import socket
+sock = socket.socket()
+sock.setblocking(1)
+sock.connect(('localhost', 102))
+print("Соединение с сервером")
+msg = input()
+sock.send(msg.encode())
+print("Отправка данных серверу")
+data = sock.recv(2048)
+print("Прием данных с сервера")
+sock.close()
+print("Разрыв соединения с сервером")
+print(data.decode())
